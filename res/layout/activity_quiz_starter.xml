@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizStarterActivity">
+
+
+    <ImageView
+        android:id="@+id/home_appLogo"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:src="@drawable/app_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <GridLayout
+        android:id="@+id/home_labelBranding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <TextView
+            android:layout_gravity="center"
+            android:fontFamily="@font/alex"
+            android:paddingEnd="20dp"
+            android:text="by"
+            android:textSize="50sp" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/org_logo" />
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/home_optionsGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:columnCount="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/home_classicButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
+            android:drawableEnd="@drawable/ic_classic"
+            android:padding="20dp"
+            android:text="CLASSIC"
+            android:textAlignment="viewStart"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/home_blitzButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
+            android:drawableEnd="@drawable/ic_blitz"
+            android:padding="20dp"
+            android:text="BLITZ"
+            android:textAlignment="viewStart"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/home_settingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
+            android:drawableEnd="@drawable/ic_settings"
+            android:padding="20dp"
+            android:text="SETTINGS"
+            android:textAlignment="viewStart"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/home_aboutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:drawableEnd="@drawable/ic_about"
+            android:padding="20dp"
+            android:text="ABOUT"
+            android:textAlignment="viewStart"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/starter_subjectsGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:alpha="1"
+        android:columnCount="1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/starter_bioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="0.45"
+                android:backgroundTint="@color/blue"
+                android:drawableEnd="@drawable/img_bio0"
+                android:padding="20dp"
+                android:text="BIO"
+                android:textAlignment="viewStart"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/starter_chemButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="0.45"
+                android:backgroundTint="@color/yellow"
+                android:drawableEnd="@drawable/img_chem0"
+                android:padding="20dp"
+                android:text="CHE"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/starter_phyButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="0.45"
+                android:backgroundTint="@color/reddark"
+                android:drawableEnd="@drawable/img_phy0"
+                android:padding="20dp"
+                android:text="PHY"
+                android:textAlignment="viewStart"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/starter_compButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="0.45"
+                android:backgroundTint="@color/purple"
+                android:drawableEnd="@drawable/img_cse0"
+                android:padding="20dp"
+                android:text="CSE"
+                android:textAlignment="viewStart"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/starter_geoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="0.45"
+                android:backgroundTint="@color/green"
+                android:drawableEnd="@drawable/img_geo0"
+                android:padding="20dp"
+                android:text="GEO"
+                android:textAlignment="viewStart"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/starter_histButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="0.45"
+                android:backgroundTint="@color/orange"
+                android:drawableEnd="@drawable/img_hist0"
+                android:padding="20dp"
+                android:text="HIS"
+                android:textAlignment="viewStart"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/starter_astroButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:backgroundTint="@color/spaceblue"
+                android:drawableEnd="@drawable/img_astro0"
+                android:padding="20dp"
+                android:text="AST"
+                android:textAlignment="viewStart"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/starter_moreButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.45"
+                android:backgroundTint="@color/black"
+                android:drawableEnd="@drawable/ic_more"
+                android:padding="20dp"
+                android:text="More"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+        </LinearLayout>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/starter_labelInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alex"
+        android:text="Choose a subject"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <FrameLayout
+        android:id="@+id/settingsContainerFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/home_settingsBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@color/black" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="50dp"
+            app:cardCornerRadius="16dp"
+            app:contentPadding="30dp">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="1">
+
+                <TextView
+                    android:fontFamily="@font/helveticabold"
+                    android:paddingBottom="16sp"
+                    android:text="Settings"
+                    android:textSize="22sp" />
+
+                <GridLayout android:layout_width="match_parent">
+
+                    <TextView
+                        android:fontFamily="@font/helvetica"
+                        android:text="Theme"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:layout_gravity="end" />
+                </GridLayout>
+
+                <GridLayout android:layout_width="match_parent">
+
+                    <TextView
+                        android:fontFamily="@font/helvetica"
+                        android:text="Music"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/settings_musicSwitch"
+                        android:layout_gravity="end" />
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:paddingBottom="16sp">
+
+                    <TextView
+                        android:fontFamily="@font/helvetica"
+                        android:text="Sounds"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/settings_soundsSwitch"
+                        android:layout_gravity="end" />
+                </GridLayout>
+
+                <GridLayout android:layout_width="match_parent">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_gravity="end"
+                        android:backgroundTint="@color/red"
+                        android:elevation="50dp"
+                        android:textSize="10sp"
+                        android:text="⚠️    RESET SCORES"
+                        app:cornerRadius="8dp"
+                        app:elevation="50dp" />
+                </GridLayout>
+
+
+            </GridLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
